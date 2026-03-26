@@ -39,6 +39,8 @@
 			textBox1 = new TextBox();
 			sendBtn = new Button();
 			connResetbtn = new Button();
+			ZplTestBtn = new Button();
+			textBoxClrearBtn = new Button();
 			SuspendLayout();
 			// 
 			// label1
@@ -133,7 +135,7 @@
 			// 
 			// connResetbtn
 			// 
-			connResetbtn.Location = new Point(629, 79);
+			connResetbtn.Location = new Point(629, 14);
 			connResetbtn.Name = "connResetbtn";
 			connResetbtn.Size = new Size(145, 46);
 			connResetbtn.TabIndex = 5;
@@ -141,13 +143,35 @@
 			connResetbtn.UseVisualStyleBackColor = true;
 			connResetbtn.Click += connResetbtn_Click;
 			// 
+			// ZplTestBtn
+			// 
+			ZplTestBtn.Location = new Point(629, 79);
+			ZplTestBtn.Name = "ZplTestBtn";
+			ZplTestBtn.Size = new Size(145, 46);
+			ZplTestBtn.TabIndex = 5;
+			ZplTestBtn.Text = "테스트 ZPL 출력";
+			ZplTestBtn.UseVisualStyleBackColor = true;
+			ZplTestBtn.Click += ZplTestBtn_Click;
+			// 
+			// textBoxClrearBtn
+			// 
+			textBoxClrearBtn.Location = new Point(12, 406);
+			textBoxClrearBtn.Name = "textBoxClrearBtn";
+			textBoxClrearBtn.Size = new Size(94, 29);
+			textBoxClrearBtn.TabIndex = 3;
+			textBoxClrearBtn.Text = "Clear";
+			textBoxClrearBtn.UseVisualStyleBackColor = true;
+			textBoxClrearBtn.Click += textBoxClrearBtn_Click;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(9F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(ZplTestBtn);
 			Controls.Add(connResetbtn);
 			Controls.Add(textBox1);
+			Controls.Add(textBoxClrearBtn);
 			Controls.Add(sendBtn);
 			Controls.Add(serialConnBtn);
 			Controls.Add(tcpConnBtn);
@@ -177,5 +201,7 @@
 		private TextBox textBox1;
 		private Button sendBtn;
 		private Button connResetbtn;
+		private Button ZplTestBtn;
+		private Button textBoxClrearBtn;
 	}
 }
