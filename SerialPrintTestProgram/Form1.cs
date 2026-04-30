@@ -1,4 +1,5 @@
 using System.Net.Sockets;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SerialPrintTestProgram
 {
@@ -44,9 +45,9 @@ namespace SerialPrintTestProgram
 
 			string ip = cmbIp.Text;
 			int port;
-			if (cmbPort.SelectedItem != null)
+			if (!string.IsNullOrWhiteSpace(cmbIp.Text))
 			{
-				port = (int)cmbPort.SelectedItem;
+				port = int.Parse(cmbPort.Text);
 			}
 			else
 			{
